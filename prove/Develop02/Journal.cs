@@ -37,7 +37,7 @@ namespace Develop02
             do
             {
                 choice = GetChoice();
-1               switch (choice)
+                switch (choice)
                 {
                     case "1":
                         DisplayJournalContents();
@@ -51,7 +51,7 @@ namespace Develop02
                     default:
                         break;
                 }
-            } while (true);
+            } while (choice != "4");
             
             
         }
