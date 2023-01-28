@@ -26,19 +26,34 @@ namespace Develop02
             Title = "Journal ";
                 DisplayIntro();
                 CreateJournalFile();
-
-                WriteLine("You cho0se: " + GetChoice());
-
-                AddEntry();
-                DisplayJournalContents();
-                //ClearFile();
-                
+                RunMenu();
+                     
                 DisplayOutro();
         }
 
         private void RunMenu()
         {
-
+            string choice;
+            do
+            {
+                choice = GetChoice();
+1               switch (choice)
+                {
+                    case "1":
+                        DisplayJournalContents();
+                        break;
+                    case "2":
+                        ClearFile();
+                        break;
+                    case "3":
+                        AddEntry();
+                        break;
+                    default:
+                        break;
+                }
+            } while (true);
+            
+            
         }
 
         private string GetChoice()
